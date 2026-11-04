@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matulin Consulting</title>
+<meta name="description" content="Professional accreditation consulting for postsecondary institutions. Nearly ten years of experience helping schools get accredited and stay accredited.">
+<meta property="og:title" content="Matulin Consulting: Accreditation & Compliance Experts">
+<meta property="og:description" content="Professional accreditation consulting. Get accredited and stay accredited.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: an experience panel beside the hero claim, then ruled document-style rows instead of cards. The logo's teal check is the only ornament. */
+:root {
+  --paper: #FFFFFF;
+  --tint: #EEF4F6;
+  --ink: #1C2B3A;
+  --muted: #52646F;
+  --navy: #163155;
+  --teal: #1F9AA5;
+  --teal-ink: #0E6F79;
+  --line: #CFDBE1;
+  --on-navy: #F2F7F9;
+  --on-navy-muted: #B5C7D6;
+  --display: "Libre Franklin", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; }
+h1, h2, h3 { font-family: var(--display); color: var(--navy); margin: 0; text-wrap: balance; }
+p, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+a { color: var(--teal-ink); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 24px; }
+.section { padding-block: 80px; }
+.section.tint { background: var(--tint); }
+.label { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-ink); }
+.section-head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 720px; }
+.section-head h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -.015em; }
+.section-head p { color: var(--muted); }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 14px; }
+.site-header img { height: 46px; width: auto; }
+.site-nav { display: flex; align-items: center; gap: 26px; font-family: var(--display); font-size: 15px; font-weight: 600; }
+.site-nav a { color: var(--navy); text-decoration: none; }
+.site-nav a:hover { color: var(--teal-ink); }
+.site-nav a.btn { color: var(--on-navy); }
+.site-nav a.btn:hover { color: var(--on-navy); }
+
+.btn { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 16px; text-decoration: none; padding: 13px 22px; border-radius: 3px; background: var(--navy); color: var(--on-navy); border: 2px solid var(--navy); transition: background-color .15s, border-color .15s; }
+.btn:hover { background: #0F2340; border-color: #0F2340; }
+.btn.ghost { background: transparent; color: var(--navy); }
+.btn.ghost:hover { background: var(--tint); border-color: var(--navy); }
+.site-nav .btn { padding: 9px 16px; font-size: 15px; }
+
+/* Hero */
+.hero { padding-block: 72px 80px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; }
+.hero h1 { font-size: clamp(42px, 6vw, 76px); font-weight: 800; line-height: 1.04; letter-spacing: -.025em; margin-top: 16px; }
+.hero .lede { font-size: 21px; line-height: 1.5; margin-top: 24px; max-width: 34em; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+.record { background: var(--navy); color: var(--on-navy); padding: 30px 32px 26px; border-radius: 3px; }
+.record .years { font-family: var(--display); font-weight: 800; font-size: 46px; line-height: 1.05; letter-spacing: -.02em; }
+.record .years-note { font-size: 18px; line-height: 1.45; margin-top: 10px; }
+.record .checks { margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.2); }
+.record .checks li::before { background: #7FD3DB; }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: var(--paper); border-top: 2px solid var(--navy); }
+.service { padding: 26px 28px 28px; border-bottom: 1px solid var(--line); }
+.service h3 { font-size: 21px; font-weight: 700; line-height: 1.25; }
+.service p { margin-top: 8px; }
+.service.lead { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 56px; background: var(--tint); padding: 30px 28px; margin-inline: 0; }
+.service.lead h3 { font-size: 27px; font-weight: 800; }
+.service.lead p:first-of-type { margin-top: 10px; }
+.checks { display: grid; gap: 8px; }
+.checks li { position: relative; padding-left: 28px; line-height: 1.4; }
+.checks li::before { content: ""; position: absolute; left: 0; top: .32em; width: 17px; height: 13px; background: var(--teal); clip-path: polygon(0 28%, 42% 62%, 100% 0, 100% 34%, 42% 100%, 0 62%); }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; counter-reset: step; }
+.steps li { counter-increment: step; border-top: 3px solid var(--teal); padding-top: 14px; }
+.steps li::before { content: counter(step); display: block; font-family: var(--display); font-weight: 800; font-size: 34px; color: var(--navy); line-height: 1; margin-bottom: 12px; }
+.steps h3 { font-size: 19px; font-weight: 700; line-height: 1.25; }
+.steps p { font-size: 17px; margin-top: 8px; line-height: 1.5; }
+
+/* Agency ledger */
+.ledger-wrap { overflow-x: auto; }
+.ledger { width: 100%; border-collapse: collapse; border-top: 2px solid var(--navy); }
+.ledger th, .ledger td { text-align: left; vertical-align: top; padding: 18px 24px 18px 0; border-bottom: 1px solid var(--line); }
+.ledger th { width: 27%; font-family: var(--display); font-weight: 700; font-size: 17px; line-height: 1.3; color: var(--navy); }
+.ledger td { padding-right: 0; line-height: 1.5; }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 64px; }
+.about .bio { display: grid; gap: 18px; max-width: 40em; margin-top: 24px; }
+.about h2 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 800; line-height: 1.12; letter-spacing: -.015em; margin-top: 12px; }
+.about .role { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--muted); margin-top: 6px; }
+.facts { display: grid; gap: 20px; align-content: start; border-top: 2px solid var(--navy); padding-top: 18px; }
+.facts h3 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-ink); }
+.facts p { font-size: 16.5px; line-height: 1.45; margin-top: 4px; }
+
+/* Contact */
+.contact { background: var(--navy); color: var(--on-navy); padding-block: 72px; }
+.contact .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; }
+.contact h2 { color: var(--on-navy); font-size: clamp(30px, 4vw, 44px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; }
+.contact p { margin-top: 16px; font-size: 19px; max-width: 32em; }
+.channels { display: grid; gap: 0; }
+.channels li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: baseline; padding-block: 14px; border-top: 1px solid rgba(255,255,255,.25); }
+.channels li:last-child { border-bottom: 1px solid rgba(255,255,255,.25); }
+.channels span { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #7FD3DB; }
+.channels a { color: var(--on-navy); font-family: var(--display); font-weight: 600; font-size: 18px; overflow-wrap: anywhere; }
+.channels .plain { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--on-navy); letter-spacing: 0; text-transform: none; }
+
+footer { padding-block: 28px 36px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+footer p + p { margin-top: 8px; }
+
+@media (max-width: 900px) {
+  .section { padding-block: 60px; }
+  .hero { padding-block: 48px 60px; }
+  .hero .wrap, .about, .contact .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service.lead { grid-template-columns: minmax(0, 1fr); row-gap: 18px; }
+  .site-nav a:not(.btn) { display: none; }
+}
+@media (max-width: 620px) {
+  body { font-size: 17px; }
+  .wrap { padding-inline: 18px; }
+  .services, .steps { grid-template-columns: minmax(0, 1fr); }
+  .service, .service.lead { padding: 24px 18px; }
+  .site-header img { height: 36px; }
+  .hero .lede { font-size: 19px; }
+  .record { padding: 24px 22px 20px; }
+  .record .years { font-size: 38px; }
+  .ledger th, .ledger td { display: block; width: 100%; padding: 0; border: 0; }
+  .ledger th { padding-top: 16px; }
+  .ledger td { padding: 4px 0 16px; border-bottom: 1px solid var(--line); }
+  .channels li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" aria-label="Matulin Consulting home"><img src="logo.png" width="457" height="122" alt="Matulin Consulting: Accreditation & Compliance Experts"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="label">Professional accreditation consulting for postsecondary institutions</p>
+      <h1>Get accredited. Stay accredited.</h1>
+      <p class="lede">Matulin Consulting helps colleges, career schools, and online institutions earn accreditation, keep it, and stay in good standing with the agencies that oversee them.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:matulinconsulting@gmail.com?subject=Accreditation%20support%20inquiry">Email Franklin</a>
+        <a class="btn ghost" href="#services">See services</a>
+      </div>
+    </div>
+
+    <aside class="record" aria-label="Experience">
+      <p class="years">Nearly ten years</p>
+      <p class="years-note">of experience in postsecondary education, accreditation, and compliance.</p>
+      <ul class="checks">
+        <li>Accreditation and reaccreditation</li>
+        <li>Self-studies and site visits</li>
+        <li>State authorization</li>
+        <li>Regulatory filings and responses</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section tint" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Services</p>
+      <h2>Support for the whole approval picture</h2>
+      <p>Bring me in for one filing, one site visit, or an ongoing compliance role.</p>
+    </div>
+    <div class="services">
+      <article class="service lead">
+        <div>
+          <h3>Accreditation and reaccreditation</h3>
+          <p>Hands-on help through the full cycle, from your first gap review to the response after your site visit.</p>
+        </div>
+        <ul class="checks">
+          <li>Readiness review against accreditor standards</li>
+          <li>Self-study and self-evaluation report writing</li>
+          <li>Evidence repository and compliance calendar</li>
+          <li>Site visit preparation for staff and leadership</li>
+          <li>Written responses to visit findings</li>
+        </ul>
+      </article>
+      <article class="service">
+        <h3>Approvals and substantive changes</h3>
+        <p>New program approvals, changes of location, annual reporting, and other filings your accreditor requires. Tell me which agency you work with, and I'll say plainly whether I'm the right fit.</p>
+      </article>
+      <article class="service">
+        <h3>State authorization</h3>
+        <p>Multistate distance-education reviews, physical-presence and exemption analysis, state inquiries, licensing filings, and renewals.</p>
+      </article>
+      <article class="service">
+        <h3>Veterans' education benefits</h3>
+        <p>Institution and program approvals, returned applications, catalog revisions, compliance visits, and contracted School Certifying Official support.</p>
+      </article>
+      <article class="service">
+        <h3>Regulatory notices and corrective action</h3>
+        <p>Enrollment holds, deficiency notices, and agency inquiries. I draft the narrative response, assemble the evidence, and fix the underlying documents.</p>
+      </article>
+      <article class="service">
+        <h3>Catalogs, policies, and disclosures</h3>
+        <p>Catalog remediation, transfer-of-credit policies, enrollment agreements, and annual completion, placement, and licensure disclosures.</p>
+      </article>
+      <article class="service">
+        <h3>New programs and partnerships</h3>
+        <p>Needs analyses, employer validation surveys, approval packages, degree-level changes, and regulatory due diligence on third-party agreements.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How accreditation support works</p>
+      <h2>Support that starts well before the site visit</h2>
+      <p>The earlier we start, the more time your team has to fix what the review turns up. If your visit is already close, I can join at any stage.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Readiness review</h3>
+        <p>We compare your policies, files, and outcomes data against the standards and rank the gaps by risk.</p>
+      </li>
+      <li>
+        <h3>Self-evaluation</h3>
+        <p>I help your team write or strengthen the report, with each statement tied to evidence a reviewer can find.</p>
+      </li>
+      <li>
+        <h3>Visit preparation</h3>
+        <p>We organize documents, sample student files, and prepare staff and leadership for team questions.</p>
+      </li>
+      <li>
+        <h3>After the visit</h3>
+        <p>I help you answer any findings with corrective action and proof, then set up a calendar for the next cycle.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section tint" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Experience</p>
+      <h2>Experience on both sides of the review</h2>
+    </div>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <tbody>
+          <tr><th scope="row">Accreditation</th><td>Led institutional self-evaluations, site visits, and responses to findings, and prepared new-program approvals and annual reports. Volunteer team evaluator at peer institutions.</td></tr>
+          <tr><th scope="row">State authorization</th><td>Managed filings and renewals, and led multistate reviews of authorization, physical presence, and distance-education requirements.</td></tr>
+          <tr><th scope="row">Veterans' education benefits</th><td>Secured institution and program approvals, supported on-site compliance visits, and served as School Certifying Official.</td></tr>
+          <tr><th scope="row">Regulatory responses</th><td>Led the response to a state enrollment hold, including catalog remediation, and helped the school regain its authority to enroll.</td></tr>
+          <tr><th scope="row">Leadership</th><td>Served as sole compliance officer and Director of Education, with responsibility for academic, student services, and compliance teams.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="label">About</p>
+      <h2>Franklin Ebalida, M.A.</h2>
+      <p class="role">Founder and Principal Consultant</p>
+      <div class="bio">
+        <p>I am a professional accreditation consultant with nearly ten years of experience in postsecondary education, and I know what accreditation asks of a small team. For more than four years I was the sole compliance officer at the Virtual Design and Construction Institute, an accredited online school, where I rose to Director of Education.</p>
+        <p>I also volunteer as an accreditation team evaluator, so I have read self-evaluations and evidence from the reviewer's side of the table as well as written them.</p>
+        <p>I founded Matulin Consulting in 2024 to give schools that same practical help: clear rules, realistic calendars, and steps your staff can carry out after I leave.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div><h3>Education</h3><p>M.A., Organizational Leadership (Honors), Point Loma Nazarene University</p><p>B.A., Sociology and Asian American Studies, UC Santa Barbara</p></div>
+      <div><h3>Service and speaking</h3><p>Volunteer accreditation team evaluator</p><p>Presenter at higher education and accreditation conferences</p></div>
+      <div><h3>Earlier experience</h3><p>Enrollment operations and support to the President and Board of Trustees at Fielding Graduate University; President's Citation, 2019</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Seeking accreditation, or facing a deadline?</h2>
+      <p>Tell me your accreditor, your next deadline, and what concerns you most. I'll let you know whether and how I can help.</p>
+    </div>
+    <ul class="channels">
+      <li><span>Email</span><a href="mailto:matulinconsulting@gmail.com?subject=Accreditation%20support%20inquiry">matulinconsulting@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/franklin-ebalida">linkedin.com/in/franklin-ebalida</a></li>
+      <li><span>Based in</span><span class="plain">San Diego, California; working with schools remotely</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Matulin Consulting is an independent consultancy. It is not affiliated with or endorsed by any accreditor or government agency. Accreditation and approval decisions rest with each agency, and no consultant can guarantee an outcome.</p>
+    <p>&copy; 2026 Matulin Consulting</p>
+  </div>
+</footer>
+
+</body>
+</html>
