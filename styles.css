@@ -195,7 +195,7 @@ footer p + p { margin-top: 8px; }
 .offer-box .btn { margin-top: 24px; }
 
 /* Examples of the work */
-.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.cases { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; max-width: 720px; }
 .case { border-top: 3px solid var(--teal); padding-top: 16px; }
 .case-tag { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--teal-ink); }
 .case h3 { font-size: 20px; font-weight: 700; line-height: 1.25; margin-top: 8px; }
