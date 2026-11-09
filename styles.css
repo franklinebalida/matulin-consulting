@@ -177,3 +177,30 @@ footer p + p { margin-top: 8px; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* Readiness Review offer: a navy band so the first step stands out */
+.offer { background: var(--navy); color: var(--on-navy); padding-block: 72px; }
+.offer .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.offer .label { color: #7FD3DB; }
+.offer h2 { color: var(--on-navy); font-size: clamp(30px, 4vw, 44px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; margin-top: 12px; }
+.offer p { margin-top: 16px; font-size: 19px; max-width: 32em; }
+.offer .offer-note { font-family: var(--display); font-size: 15px; font-weight: 600; color: var(--on-navy-muted); }
+.offer-box { background: var(--paper); color: var(--ink); padding: 28px 30px 30px; border-radius: 3px; border-top: 4px solid var(--teal); }
+.offer-box h3 { font-size: 21px; font-weight: 700; margin-bottom: 16px; }
+.offer-box .btn { margin-top: 24px; }
+
+/* Examples of the work */
+.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.case { border-top: 3px solid var(--teal); padding-top: 16px; }
+.case-tag { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--teal-ink); }
+.case h3 { font-size: 20px; font-weight: 700; line-height: 1.25; margin-top: 8px; }
+.case p:last-child { margin-top: 10px; font-size: 17px; line-height: 1.55; }
+
+@media (max-width: 900px) {
+  .offer .wrap { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .cases { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (max-width: 620px) {
+  .offer { padding-block: 56px; }
+  .offer-box { padding: 22px 20px 24px; }
+}
